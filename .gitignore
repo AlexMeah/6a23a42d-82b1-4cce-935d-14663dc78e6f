@@ -1,7 +1,5 @@
 node_modules
-build
-coverage
-.vscode
-.DS_STORE
+# Keep environment variables out of version control
 .env
-tmp
+.DS_Store
+yarn-error.log
