@@ -20,7 +20,7 @@ export default class ProductsController {
             include: {
                 reviews: {
                     orderBy: {
-                        createdAt: 'asc',
+                        createdAt: 'desc',
                     },
                 },
             },
