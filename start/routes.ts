@@ -20,6 +20,8 @@
 
 import Route from '@ioc:Adonis/Core/Route';
 
-Route.get('/', async ({ view }) => {
-    return view.render('welcome');
+Route.get('/', async ({ response }) => {
+    return response.redirect('/products');
 });
+
+Route.resource('products', 'ProductsController').only(['show', 'index']);

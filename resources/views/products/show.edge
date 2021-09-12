@@ -1,0 +1,33 @@
+@layout('layouts/default')
+@set('title', 'Home page')
+
+@section('body')
+<section class="flex flex-col justify-center max-w-xl min-h-screen mx-auto">
+    <h1 class="text-3xl font-bold leading-snug md:text-5xl">{{product.name}}</h1>
+
+    <div class="flex justify-between w-full">
+        <div class="rating-overall">
+            <div class="rating-overall__rating">{{rating}}</div>
+            <div class="rating-overall__stars">
+                {{--  TODO: Add stars partial  --}}
+            </div>
+        </div>
+        <button>Add review</button>
+    </div>
+
+    <hr>
+
+    <div class="reviews">
+        <h2>Reviews</h2>
+
+        <ul class="reviews__list">
+            @each(review in product.reviews)
+            <li class="reviews__list-item">
+                {{--  TODO: Add stars partial  --}}
+                {{review.rating}}, {{review.text}}
+            </li>
+            @end
+        </ul>
+    </div>
+</section>
+@end
