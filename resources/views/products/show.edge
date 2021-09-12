@@ -15,9 +15,9 @@
         <div class="flex items-center">
             <div class="text-3xl font-bold leading-none md:text-5xl mr-7">{{rating}}</div>
             <div>
-                @!component('components/stars', {
-                    count: rating
-                })
+                {{{ reactComponent('Stars', {
+                    count: +rating
+                }) }}}
             </div>
         </div>
         {{--  End: Overall Rating  --}}
@@ -36,9 +36,10 @@
         <ul class=" space-y-7 mt-7">
             @each(review in product.reviews)
             <li class="flex items-center">
-                @!component('components/stars', {
-                    count: review.rating
-                })
+                {{{ reactComponent('Stars', {
+                    count: +review.rating
+                }) }}}
+
                 <div class=" ml-7"><strong>{{review.rating}}</strong>, <span class="text-gray-500 ">{{review.text}}</span></div>
             </li>
             @end

@@ -4,7 +4,9 @@
     "exclude": ["node_modules", "build"],
     "compilerOptions": {
         "outDir": "build",
+        "jsx": "react",
         "rootDir": "./",
+        "lib": ["dom"],
         "sourceMap": true,
         "paths": {
             "App/*": ["./app/*"],
@@ -17,7 +19,8 @@
             "@adonisjs/repl",
             "@adonisjs/session",
             "@adonisjs/view",
-            "@adonisjs/shield"
+            "@adonisjs/shield",
+            "jest"
         ]
     }
 }

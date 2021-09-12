@@ -2,7 +2,8 @@
   "entrypoints": {
     "app": {
       "js": [
-        "http://localhost:8080/assets/vendors-node_modules_jquery_dist_jquery_js-node_modules_webpack-dev-server_client_index_js_pr-3a72c5.js",
+        "http://localhost:8080/assets/vendors-node_modules_webpack-dev-server_client_index_js_protocol_ws_3A_hostname_localhost_por-c98088.js",
+        "http://localhost:8080/assets/vendors-node_modules_classnames_index_js-node_modules_core-js_modules_es_array_fill_js-node_m-5052c5.js",
         "http://localhost:8080/assets/app.js"
       ],
       "css": [
@@ -11,7 +12,8 @@
     },
     "product": {
       "js": [
-        "http://localhost:8080/assets/vendors-node_modules_jquery_dist_jquery_js-node_modules_webpack-dev-server_client_index_js_pr-3a72c5.js",
+        "http://localhost:8080/assets/vendors-node_modules_webpack-dev-server_client_index_js_protocol_ws_3A_hostname_localhost_por-c98088.js",
+        "http://localhost:8080/assets/vendors-node_modules_jquery_dist_jquery_js.js",
         "http://localhost:8080/assets/product.js"
       ]
     }

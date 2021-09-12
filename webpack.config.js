@@ -175,18 +175,15 @@ Encore.enablePostCssLoader();
 
 /*
 |--------------------------------------------------------------------------
-| Enable Vue loader
+| Enable React loader
 |--------------------------------------------------------------------------
 |
-| Uncomment the following lines of code to enable support for vue. Also make
+| Uncomment the following lines of code to enable support for React. Also make
 | sure to install the required dependencies.
 |
 */
-// Encore.enableVueLoader(() => {}, {
-//   version: 3,
-//   runtimeCompilerBuild: false,
-//   useJsx: false
-// })
+Encore.enableTypeScriptLoader();
+Encore.enableReactPreset();
 
 /*
 |--------------------------------------------------------------------------

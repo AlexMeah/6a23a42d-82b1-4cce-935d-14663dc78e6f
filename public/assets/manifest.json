@@ -2,7 +2,9 @@
   "assets/app.css": "http://localhost:8080/assets/app.css",
   "assets/app.js": "http://localhost:8080/assets/app.js",
   "assets/product.js": "http://localhost:8080/assets/product.js",
-  "assets/vendors-node_modules_jquery_dist_jquery_js-node_modules_webpack-dev-server_client_index_js_pr-3a72c5.js": "http://localhost:8080/assets/vendors-node_modules_jquery_dist_jquery_js-node_modules_webpack-dev-server_client_index_js_pr-3a72c5.js",
+  "assets/vendors-node_modules_webpack-dev-server_client_index_js_protocol_ws_3A_hostname_localhost_por-c98088.js": "http://localhost:8080/assets/vendors-node_modules_webpack-dev-server_client_index_js_protocol_ws_3A_hostname_localhost_por-c98088.js",
+  "assets/vendors-node_modules_classnames_index_js-node_modules_core-js_modules_es_array_fill_js-node_m-5052c5.js": "http://localhost:8080/assets/vendors-node_modules_classnames_index_js-node_modules_core-js_modules_es_array_fill_js-node_m-5052c5.js",
+  "assets/vendors-node_modules_jquery_dist_jquery_js.js": "http://localhost:8080/assets/vendors-node_modules_jquery_dist_jquery_js.js",
   "assets/images/star-filled.svg": "http://localhost:8080/assets/images/star-filled.2fa465ef.svg",
   "assets/images/star.svg": "http://localhost:8080/assets/images/star.666203cd.svg"
 }
