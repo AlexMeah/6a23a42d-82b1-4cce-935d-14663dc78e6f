@@ -18,7 +18,11 @@ export default class ProductsController {
                 id,
             },
             include: {
-                reviews: true,
+                reviews: {
+                    orderBy: {
+                        createdAt: 'asc',
+                    },
+                },
             },
         });
 

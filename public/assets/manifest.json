@@ -1,5 +1,8 @@
 {
   "assets/app.css": "http://localhost:8080/assets/app.css",
   "assets/app.js": "http://localhost:8080/assets/app.js",
-  "assets/vendors-node_modules_mini-css-extract-plugin_dist_hmr_hotModuleReplacement_js-node_modules_we-84de61.js": "http://localhost:8080/assets/vendors-node_modules_mini-css-extract-plugin_dist_hmr_hotModuleReplacement_js-node_modules_we-84de61.js"
+  "assets/product.js": "http://localhost:8080/assets/product.js",
+  "assets/vendors-node_modules_jquery_dist_jquery_js-node_modules_webpack-dev-server_client_index_js_pr-3a72c5.js": "http://localhost:8080/assets/vendors-node_modules_jquery_dist_jquery_js-node_modules_webpack-dev-server_client_index_js_pr-3a72c5.js",
+  "assets/images/star-filled.svg": "http://localhost:8080/assets/images/star-filled.2fa465ef.svg",
+  "assets/images/star.svg": "http://localhost:8080/assets/images/star.666203cd.svg"
 }

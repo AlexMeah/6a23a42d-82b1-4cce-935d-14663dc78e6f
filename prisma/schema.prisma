@@ -11,9 +11,11 @@ generator client {
 }
 
 model Product {
-  id      String           @id @default(uuid())
-  name    String
-  reviews ProductReview[]
+  id        String          @id @default(uuid())
+  name      String
+  reviews   ProductReview[]
+  createdAt DateTime        @default(now())
+  updatedAt DateTime        @updatedAt @default(now())
 }
 
 model ProductReview {
@@ -22,4 +24,6 @@ model ProductReview {
   productId String?
   rating    Int
   text      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt @default(now())
 }

@@ -25,3 +25,4 @@ Route.get('/', async ({ response }) => {
 });
 
 Route.resource('products', 'ProductsController').only(['show', 'index']);
+Route.resource('products.reviews', 'ReviewsController').only(['store']);

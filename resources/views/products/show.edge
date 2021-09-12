@@ -1,8 +1,13 @@
 @layout('layouts/default')
 @set('title', 'Home page')
 
+@section('head')
+@entryPointScripts('product')
+@endsection
+
+
 @section('body')
-<section class="flex flex-col justify-center max-w-xl min-h-screen mx-auto">
+<section data-productid="{{product.id}}" class="flex flex-col justify-center max-w-xl min-h-screen mx-auto">
     <h1 class="text-3xl font-bold leading-snug md:text-5xl">{{product.name}}</h1>
 
     <div class="flex items-center justify-between w-full mt-6">
@@ -17,7 +22,8 @@
         </div>
         {{--  End: Overall Rating  --}}
         @!component('components/button', {
-            text: 'Add review'
+            text: 'Add review',
+            className: 'js-add-review-btn'
         })
     </div>
 
