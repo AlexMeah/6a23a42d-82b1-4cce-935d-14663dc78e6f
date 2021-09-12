@@ -7,13 +7,14 @@
         <label>
             <i class="stars__star-icon"></i>
             <input
-            type="radio"
-            required
-            name="{{name || 'rating'}}"
-            value="{{index + 1}}"
-            @if(roundedCount === index + 1)
-            checked
-            @endif
+                class="hidden"
+                type="radio"
+                required
+                name="{{name || 'rating'}}"
+                value="{{index + 1}}"
+                @if(roundedCount === index + 1)
+                checked
+                @endif
             />
         </label>
         @else
