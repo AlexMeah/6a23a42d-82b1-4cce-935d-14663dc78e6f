@@ -4,6 +4,12 @@ import ReactDOMServer from 'react-dom/server';
 
 import components from '../resources/react/components';
 
+declare global {
+    interface Window {
+        PAGE_DATA: any;
+    }
+}
+
 View.global('reactComponent', (componentName, props) => {
     const Component = components[componentName];
 

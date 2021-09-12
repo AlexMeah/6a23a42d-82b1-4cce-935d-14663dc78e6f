@@ -1,4 +1,4 @@
-@layout('layouts/default')
+@layout('layouts/react')
 @set('title', 'Home page')
 
 @section('head')
@@ -7,48 +7,5 @@
 
 
 @section('body')
-<section data-productid="{{product.id}}" class="flex flex-col justify-center max-w-xl min-h-screen mx-auto">
-    <h1 class="text-3xl font-bold leading-snug md:text-5xl">{{product.name}}</h1>
-
-    <div class="flex items-center justify-between w-full mt-6">
-        {{--  Start: Overall Rating  --}}
-        <div class="flex items-center">
-            <div class="text-3xl font-bold leading-none md:text-5xl mr-7">{{rating}}</div>
-            <div>
-                {{{ reactComponent('Stars', {
-                    count: +rating
-                }) }}}
-            </div>
-        </div>
-        {{--  End: Overall Rating  --}}
-        @!component('components/button', {
-            text: 'Add review',
-            className: 'js-add-review-btn'
-        })
-    </div>
-
-    <hr class="h-px mt-16 mb-10 bg-gray-600 border-0">
-
-    {{--  Start: Review List  --}}
-    <div>
-        <h2 class="text-2xl font-bold md:text-3xl">Reviews</h2>
-
-        <ul class=" space-y-7 mt-7">
-            @each(review in product.reviews)
-            <li class="flex items-center">
-                {{{ reactComponent('Stars', {
-                    count: +review.rating
-                }) }}}
-
-                <div class=" ml-7"><strong>{{review.rating}}</strong>, <span class="text-gray-500 ">{{review.text}}</span></div>
-            </li>
-            @end
-        </ul>
-    </div>
-    {{--  End: Review List  --}}
-
-    {{--  Start: Add review modal  --}}
-    @include('partials/add-review')
-    {{--  End: Add review modal  --}}
-</section>
+{{{ body }}}
 @end

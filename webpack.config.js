@@ -46,7 +46,7 @@ Encore.setPublicPath('/assets');
 |
 */
 Encore.addEntry('app', './resources/js/app.js');
-Encore.addEntry('product', './resources/js/product/index.js');
+Encore.addEntry('product', './resources/js/product/index.tsx');
 
 /*
 |--------------------------------------------------------------------------
