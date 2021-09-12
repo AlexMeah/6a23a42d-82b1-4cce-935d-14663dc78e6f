@@ -3,7 +3,11 @@
 
 .stars__star-icon {
     background-image: url(/public/images/product/star.svg);
-    @apply block w-8 h-8 transition-transform duration-150 hover:scale-110;
+    @apply block w-8 h-8 transition-transform duration-150;
+}
+
+.stars__star-icon--interactive {
+    @apply hover:scale-110;
 }
 
 .stars__star-input {

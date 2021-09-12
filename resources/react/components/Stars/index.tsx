@@ -30,7 +30,11 @@ export default function Stars({ interactive = false, count, name = undefined }) 
                                     value={index + 1}
                                     checked={Boolean(roundedCount === index + 1)}
                                 />
-                                <i className={cn('stars__star-icon')}></i>
+                                <i
+                                    className={cn('stars__star-icon', {
+                                        'stars__star-icon--interactive': interactive,
+                                    })}
+                                ></i>
                             </label>
                         ) : (
                             <i className="stars__star-icon"></i>
