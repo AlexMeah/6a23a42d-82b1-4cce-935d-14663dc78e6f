@@ -6,7 +6,7 @@ import Ws from 'App/Services/Ws';
 import calculateRating from 'App/utils/calculateRating';
 
 const newReviewSchema = schema.create({
-    rating: schema.string({}, [rules.regex(new RegExp(/^d(?:\.\d)?$/))]),
+    rating: schema.string({}, [rules.regex(new RegExp(/^\d(?:\.\d)?$/))]),
     text: schema.string({ escape: true, trim: true }),
 });
 

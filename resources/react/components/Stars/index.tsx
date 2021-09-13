@@ -45,12 +45,19 @@ type StarsProps = {
 };
 
 export default function Stars({ interactive = false, count, name = undefined }: StarsProps) {
+    const [value, setValue] = React.useState<number | null>(() => count);
+
+    React.useEffect(() => {
+        setValue(count);
+    }, [count]);
+
     return (
         <Rating
             icon={<Star className="flex-shrink-0 inline-block w-8 h-8 text-yellow-3" />}
             emptyIcon={<Star className="flex-shrink-0 inline-block w-8 h-8 text-gray-400" />}
             name={name || 'rating'}
-            defaultValue={count}
+            value={value}
+            onChange={(_e, newValue) => setValue(newValue)}
             precision={0.5}
             readOnly={!interactive}
         />

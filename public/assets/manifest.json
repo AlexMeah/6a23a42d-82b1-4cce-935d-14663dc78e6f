@@ -3,10 +3,5 @@
   "assets/app.js": "http://localhost:8080/assets/app.js",
   "assets/product.js": "http://localhost:8080/assets/product.js",
   "assets/vendors-node_modules_webpack-dev-server_client_index_js_protocol_ws_3A_hostname_localhost_por-c98088.js": "http://localhost:8080/assets/vendors-node_modules_webpack-dev-server_client_index_js_protocol_ws_3A_hostname_localhost_por-c98088.js",
-  "assets/vendors-node_modules_material-ui_lab_esm_Rating_index_js-node_modules_classnames_index_js-nod-0c2774.js": "http://localhost:8080/assets/vendors-node_modules_material-ui_lab_esm_Rating_index_js-node_modules_classnames_index_js-nod-0c2774.js",
-  "assets/images/star-half.svg": "http://localhost:8080/assets/images/star-half.97954d27.svg",
-  "assets/images/star-filled.svg": "http://localhost:8080/assets/images/star-filled.2fa465ef.svg",
-  "assets/images/star.svg": "http://localhost:8080/assets/images/star.666203cd.svg",
-  "assets/vendors-node_modules_classnames_index_js-node_modules_core-js_modules_es_array_from_js-node_m-b3e30c.js": "http://localhost:8080/assets/vendors-node_modules_classnames_index_js-node_modules_core-js_modules_es_array_from_js-node_m-b3e30c.js",
   "assets/vendors-node_modules_material-ui_lab_esm_Rating_index_js-node_modules_classnames_index_js-nod-2c8098.js": "http://localhost:8080/assets/vendors-node_modules_material-ui_lab_esm_Rating_index_js-node_modules_classnames_index_js-nod-2c8098.js"
 }

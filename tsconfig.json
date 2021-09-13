@@ -20,7 +20,8 @@
             "@adonisjs/session",
             "@adonisjs/view",
             "@adonisjs/shield",
-            "jest"
+            "jest",
+            "@testing-library/jest-dom"
         ]
     }
 }

@@ -2,12 +2,12 @@ import { Product, ProductReview } from '@prisma/client';
 import { ReviewsControllerIndexResponse } from 'App/Controllers/Http/ReviewsController';
 import * as React from 'react';
 import { NewReview } from 'resources/types/Events';
-import Button from '../components/Button';
-import Modal from '../components/Modal';
-import OverallRating from '../components/OverallRating';
-import ReviewList from '../components/ReviewList';
+import Button from '../../components/Button';
+import Modal from '../../components/Modal';
+import OverallRating from '../../components/OverallRating';
+import ReviewList from '../../components/ReviewList';
 
-import Stars from '../components/Stars';
+import Stars from '../../components/Stars';
 
 export type ProductProps = {
     rating: string;
@@ -22,10 +22,11 @@ export default function ProductPage({ product, rating }: ProductProps) {
         rating,
         reviews: product.reviews,
     }));
+    const unsub = React.useRef(() => {});
 
     const fetchReviews = async () => {
         const newReviewData: ReviewsControllerIndexResponse | null = await fetch(
-            '/products/' + product.id + '/reviews',
+            window.location.origin + '/products/' + product.id + '/reviews',
             {
                 method: 'GET',
                 headers: {
@@ -45,15 +46,14 @@ export default function ProductPage({ product, rating }: ProductProps) {
                 fetchReviews();
             }
         };
-        let unsub = () => {};
 
-        import('../../services/socket').then(({ default: socket }) => {
+        import('../../../services/socket').then(({ default: socket }) => {
             socket.on('new:review', handler);
 
-            unsub = () => socket.off('new:review', handler);
+            unsub.current = () => socket.off('new:review', handler);
         });
 
-        return unsub;
+        return () => unsub.current();
     }, []);
 
     return (
