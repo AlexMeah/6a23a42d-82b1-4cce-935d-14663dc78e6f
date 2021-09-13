@@ -6,9 +6,11 @@ There is quite a bit packed into the challenge. I'd have liked to spend more tim
 
 ## How to run the project 
 
-- yarn install
-- npx prisma db seed
-- yarn dev
+```bash
+yarn install
+npx prisma db seed
+yarn dev
+```
 
 ## Structure
 
