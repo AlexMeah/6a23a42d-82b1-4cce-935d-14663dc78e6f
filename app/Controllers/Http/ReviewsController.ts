@@ -6,7 +6,7 @@ import Ws from 'App/Services/Ws';
 import calculateRating from 'App/utils/calculateRating';
 
 const newReviewSchema = schema.create({
-    rating: schema.number([rules.range(1, 5)]),
+    rating: schema.string({}, [rules.regex(new RegExp(/^d(?:\.\d)?$/))]),
     text: schema.string({ escape: true, trim: true }),
 });
 
@@ -39,6 +39,7 @@ export default class ReviewsController {
 
     public async store({ params, request, response }: HttpContextContract) {
         const { product_id } = params;
+
         const payload = await request.validate({ schema: newReviewSchema });
 
         await prisma.product.update({
@@ -47,7 +48,7 @@ export default class ReviewsController {
             },
             data: {
                 reviews: {
-                    create: [payload],
+                    create: [{ ...payload, rating: parseFloat(payload.rating) }],
                 },
             },
         });

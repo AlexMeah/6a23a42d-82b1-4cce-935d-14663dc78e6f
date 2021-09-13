@@ -3,6 +3,7 @@ import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext';
 import prisma from 'App/Prisma';
 import { renderToStaticMarkup } from 'react-dom/server';
 import ProductPage from '../../../resources/react/pages/ProductPage';
+import calculateRating from 'App/utils/calculateRating';
 
 export default class ProductsController {
     public async index({ view }: HttpContextContract) {
@@ -35,10 +36,7 @@ export default class ProductsController {
 
         const viewModel = {
             product,
-            rating: (
-                product.reviews.reduce((total, review) => total + review.rating, 0) /
-                product.reviews.length
-            ).toFixed(1),
+            rating: calculateRating(product.reviews),
         };
 
         return view.render('products/show', {

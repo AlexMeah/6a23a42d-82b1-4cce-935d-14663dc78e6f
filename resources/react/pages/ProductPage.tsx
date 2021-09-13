@@ -80,7 +80,11 @@ export default function ProductPage({ product, rating }: ProductProps) {
             <ReviewList reviews={reviewData.reviews} />
 
             {/* Start: Add review modal */}
-            <Modal labelledBy="add-review-modal-label" open={addReviewModalOpen}>
+            <Modal
+                labelledBy="add-review-modal-label"
+                open={addReviewModalOpen}
+                close={() => setAddReviewModalOpen(false)}
+            >
                 <h2
                     id="add-review-modal-label"
                     className="text-3xl font-bold leading-snug md:text-5xl"

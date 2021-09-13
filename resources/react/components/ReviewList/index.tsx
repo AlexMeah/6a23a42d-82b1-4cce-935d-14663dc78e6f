@@ -17,7 +17,7 @@ export default function ReviewList({ reviews }: ReviewListProps) {
                         <Stars count={+review.rating} />
 
                         <div className=" ml-7">
-                            <strong>{review.rating}</strong>,{' '}
+                            <strong>{review.rating.toString()}</strong>,
                             <span className="text-gray-500 ">{review.text}</span>
                         </div>
                     </li>

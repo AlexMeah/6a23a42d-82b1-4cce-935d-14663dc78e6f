@@ -22,7 +22,7 @@ model ProductReview {
   id        String   @id @default(uuid())
   Product   Product? @relation(fields: [productId], references: [id])
   productId String?
-  rating    Int
+  rating    Float
   text      String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt @default(now())
