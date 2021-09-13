@@ -13,7 +13,7 @@ export default function ReviewList({ reviews }: ReviewListProps) {
 
             <ul className=" space-y-7 mt-7">
                 {reviews.map((review) => (
-                    <li className="flex items-center">
+                    <li className="flex items-center" key={review.id}>
                         <Stars count={+review.rating} />
 
                         <div className=" ml-7">

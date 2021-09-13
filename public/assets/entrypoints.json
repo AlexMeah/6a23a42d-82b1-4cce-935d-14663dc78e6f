@@ -12,7 +12,7 @@
     "product": {
       "js": [
         "http://localhost:8080/assets/vendors-node_modules_webpack-dev-server_client_index_js_protocol_ws_3A_hostname_localhost_por-c98088.js",
-        "http://localhost:8080/assets/vendors-node_modules_classnames_index_js-node_modules_core-js_modules_es_array_fill_js-node_m-6d63ae.js",
+        "http://localhost:8080/assets/vendors-node_modules_classnames_index_js-node_modules_core-js_modules_es_array_fill_js-node_m-95cb4e.js",
         "http://localhost:8080/assets/product.js"
       ]
     }

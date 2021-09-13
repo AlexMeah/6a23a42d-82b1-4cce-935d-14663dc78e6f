@@ -2,14 +2,9 @@
   "assets/app.css": "http://localhost:8080/assets/app.css",
   "assets/app.js": "http://localhost:8080/assets/app.js",
   "assets/product.js": "http://localhost:8080/assets/product.js",
-  "assets/vendors-node_modules_core-js_internals_export_js-node_modules_core-js_internals_object-keys_j-80e73d.js": "http://localhost:8080/assets/vendors-node_modules_core-js_internals_export_js-node_modules_core-js_internals_object-keys_j-80e73d.js",
-  "assets/vendors-node_modules_classnames_index_js-node_modules_core-js_modules_es_array_fill_js-node_m-822336.js": "http://localhost:8080/assets/vendors-node_modules_classnames_index_js-node_modules_core-js_modules_es_array_fill_js-node_m-822336.js",
+  "assets/vendors-node_modules_webpack-dev-server_client_index_js_protocol_ws_3A_hostname_localhost_por-c98088.js": "http://localhost:8080/assets/vendors-node_modules_webpack-dev-server_client_index_js_protocol_ws_3A_hostname_localhost_por-c98088.js",
+  "assets/vendors-node_modules_classnames_index_js-node_modules_core-js_modules_es_array_fill_js-node_m-6813fa.js": "http://localhost:8080/assets/vendors-node_modules_classnames_index_js-node_modules_core-js_modules_es_array_fill_js-node_m-6813fa.js",
   "assets/images/star-filled.svg": "http://localhost:8080/assets/images/star-filled.2fa465ef.svg",
   "assets/images/star.svg": "http://localhost:8080/assets/images/star.666203cd.svg",
-  "assets/vendors-node_modules_classnames_index_js-node_modules_core-js_internals_array-method-is-stric-d5f33d.js": "http://localhost:8080/assets/vendors-node_modules_classnames_index_js-node_modules_core-js_internals_array-method-is-stric-d5f33d.js",
-  "assets/vendors-node_modules_classnames_index_js-node_modules_core-js_modules_es_array_fill_js-node_m-ce9f94.js": "http://localhost:8080/assets/vendors-node_modules_classnames_index_js-node_modules_core-js_modules_es_array_fill_js-node_m-ce9f94.js",
-  "assets/vendors-node_modules_core-js_modules_es_array_index-of_js-node_modules_core-js_modules_es_obj-ac5da7.js": "http://localhost:8080/assets/vendors-node_modules_core-js_modules_es_array_index-of_js-node_modules_core-js_modules_es_obj-ac5da7.js",
-  "assets/vendors-node_modules_webpack-dev-server_client_index_js_protocol_ws_3A_hostname_localhost_por-c98088.js": "http://localhost:8080/assets/vendors-node_modules_webpack-dev-server_client_index_js_protocol_ws_3A_hostname_localhost_por-c98088.js",
-  "assets/vendors-node_modules_classnames_index_js-node_modules_core-js_modules_es_array_fill_js-node_m-6d63ae.js": "http://localhost:8080/assets/vendors-node_modules_classnames_index_js-node_modules_core-js_modules_es_array_fill_js-node_m-6d63ae.js",
-  "assets/vendors-node_modules_classnames_index_js-node_modules_core-js_modules_es_array_fill_js-node_m-ebc3b6.js": "http://localhost:8080/assets/vendors-node_modules_classnames_index_js-node_modules_core-js_modules_es_array_fill_js-node_m-ebc3b6.js"
+  "assets/vendors-node_modules_classnames_index_js-node_modules_core-js_modules_es_array_fill_js-node_m-95cb4e.js": "http://localhost:8080/assets/vendors-node_modules_classnames_index_js-node_modules_core-js_modules_es_array_fill_js-node_m-95cb4e.js"
 }

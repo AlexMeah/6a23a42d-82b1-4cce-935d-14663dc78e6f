@@ -1,5 +1,7 @@
 import { Product, ProductReview } from '@prisma/client';
+import { ReviewsControllerIndexResponse } from 'App/Controllers/Http/ReviewsController';
 import * as React from 'react';
+import { NewReview } from 'resources/types/Events';
 import Button from '../components/Button';
 import Modal from '../components/Modal';
 import OverallRating from '../components/OverallRating';
@@ -16,7 +18,43 @@ export type ProductProps = {
 
 export default function ProductPage({ product, rating }: ProductProps) {
     const [addReviewModalOpen, setAddReviewModalOpen] = React.useState(false);
-    const [reviews] = React.useState(() => product.reviews);
+    const [reviewData, setReviewData] = React.useState(() => ({
+        rating,
+        reviews: product.reviews,
+    }));
+
+    const fetchReviews = async () => {
+        const newReviewData: ReviewsControllerIndexResponse | null = await fetch(
+            '/products/' + product.id + '/reviews',
+            {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            }
+        ).then((res) => (res.ok ? res.json() : null));
+
+        if (newReviewData) {
+            setReviewData(newReviewData);
+        }
+    };
+
+    React.useEffect(() => {
+        let handler = ({ productId }: NewReview) => {
+            if (productId === product.id) {
+                fetchReviews();
+            }
+        };
+        let unsub = () => {};
+
+        import('../../services/socket').then(({ default: socket }) => {
+            socket.on('new:review', handler);
+
+            unsub = () => socket.off('new:review', handler);
+        });
+
+        return unsub;
+    }, []);
 
     return (
         <section
@@ -26,7 +64,7 @@ export default function ProductPage({ product, rating }: ProductProps) {
             <h1 className="text-3xl font-bold leading-snug md:text-5xl">{product.name}</h1>
 
             <div className="flex items-center justify-between w-full mt-6">
-                <OverallRating rating={+rating} />
+                <OverallRating rating={+reviewData.rating} />
 
                 <Button
                     onClick={() => {
@@ -39,7 +77,7 @@ export default function ProductPage({ product, rating }: ProductProps) {
 
             <hr className="h-px mt-16 mb-10 bg-gray-600 border-0" />
 
-            <ReviewList reviews={reviews} />
+            <ReviewList reviews={reviewData.reviews} />
 
             {/* Start: Add review modal */}
             <Modal labelledBy="add-review-modal-label" open={addReviewModalOpen}>

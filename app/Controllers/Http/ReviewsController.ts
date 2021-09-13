@@ -1,15 +1,38 @@
+import { ProductReview } from '.prisma/client';
 import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext';
 import { schema, rules } from '@ioc:Adonis/Core/Validator';
 import prisma from 'App/Prisma';
+import Ws from 'App/Services/Ws';
+import calculateRating from 'App/utils/calculateRating';
 
 const newReviewSchema = schema.create({
     rating: schema.number([rules.range(1, 5)]),
     text: schema.string({ escape: true, trim: true }),
 });
 
+export type ReviewsControllerIndexResponse = {
+    rating: string;
+    reviews: ProductReview[];
+};
+
 export default class ReviewsController {
-    //   public async index ({}: HttpContextContract) {
-    //   }
+    public async index({ params }: HttpContextContract) {
+        const { product_id } = params;
+
+        const reviews = await prisma.productReview.findMany({
+            where: {
+                productId: product_id,
+            },
+            orderBy: {
+                createdAt: 'desc',
+            },
+        });
+
+        return {
+            rating: calculateRating(reviews),
+            reviews,
+        };
+    }
 
     //   public async create ({}: HttpContextContract) {
     //   }
@@ -28,6 +51,8 @@ export default class ReviewsController {
                 },
             },
         });
+
+        Ws.io.emit('new:review', { productId: product_id });
 
         return response.redirect().back();
     }
