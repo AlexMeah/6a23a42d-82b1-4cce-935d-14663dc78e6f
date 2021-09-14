@@ -18,7 +18,7 @@ export default function ReviewList({ reviews }: ReviewListProps) {
 
                         <div className=" ml-7">
                             <strong>{review.rating.toString()}</strong>,
-                            <span className="text-gray-500 ">{review.text}</span>
+                            <span className="text-gray-500 "> {review.text}</span>
                         </div>
                     </li>
                 ))}
